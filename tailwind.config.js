@@ -16,6 +16,11 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      // Добавляем вариант hover только для устройств с hover поддержкой
+      addVariant('hover', '@media (hover: hover) and (pointer: fine) { &:hover }');
+    },
+  ],
 }
 

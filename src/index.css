@@ -8,23 +8,6 @@
   body {
     @apply font-sans antialiased;
   }
-
-  /* Отключаем hover эффекты на сенсорных устройствах */
-  @media (hover: none) and (pointer: coarse) {
-    button:hover,
-    a:hover,
-    .group:hover *,
-    [class*="hover:"]:hover {
-      /* Сбрасываем все hover стили */
-      background-color: inherit !important;
-      color: inherit !important;
-      border-color: inherit !important;
-      transform: none !important;
-      scale: 1 !important;
-      opacity: inherit !important;
-      box-shadow: inherit !important;
-    }
-  }
 }
 
 @layer components {
